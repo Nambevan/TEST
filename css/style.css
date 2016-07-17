@@ -36,15 +36,16 @@
     transition: 0.5s ;
 }
 .microsoft_menu>li{
-    float: left;
-    width: 117px;
-    height: 48px;
+    display: inline-block;
+    width: 32%;
     cursor: pointer;
     text-align: center;
     line-height: 3;
     position: relative;
 }
 .microsoft_menu{
+    width: 40%;
+    float: left;
     z-index: 100;
     list-style-type: none;
     font-size: 15px;
@@ -71,7 +72,7 @@
     z-index: 102;
     display: none;
     left: 0;
-    top: 48px;
+    top: 45px;
 }
 .sub_menu_2{
     z-index: 103;
@@ -88,11 +89,11 @@
 .sub_menu_4{
     display: none;
     left: 0;
-    top: 48px;
+    top: 45px;
 }
 .sub_menu_5,.sub_menu_6,.sub_menu_7,.sub_menu_8,.sub_menu_9{
     bottom: 0;
-    left: 220px;
+    left: 236px;
     display: none;
 }
 .sub_menu_7{
@@ -196,11 +197,15 @@
 .hidden_menu{
     display: none;
 }
-
 .menu_item ul li:hover > ul{
     display:block;
 }
-
+.down_for_sub_menu{
+    display: none;
+}
+                                .right_for_sub_menu{
+                                    float: right;
+                                }
            @media screen and (max-width: 850px){
                .microsoft {
                    padding: 0 30px 0 30px;
@@ -236,20 +241,38 @@
                }
            }
                           @media screen and (max-width: 700px){
-                              .microsoft_menu>li {
-                                  float: none;
-                                  height: 50px;
-                                  width: 162px;
-
+                                .down_for_sub_menu{
+                                    display: block;
+                                    float: right;
+                                }
+                              .right_for_sub_menu{
+                                  display: none;
                               }
-                              .microsoft_menu {
-                                  background-color: #F2F2F2;
+                              .microsoft_menu>li{
+                                  display:block;
+                                  width: 100%;
+                                  text-align: center;
+                              }
+                              .microsoft_menu>li ul{
+                                  position: static;
+                              }
+                              .menu_item ul li:hover > ul{
+                                  display:none;
+                              }
+                              .microsoft_menu{
                                   display: none;
                                   position: absolute;
+                                  width: 303px;
                                   right: 0;
                                   top: 48px;
-                                  width: 162px;
+                                  background-color: #f2f2f2;
                               }
+                              .sub_menu{
+                                  background-color: #f2f2f2;
+                                  width: 100%;
+                                  text-align: center;
+                              }
+
                               .hidden_menu{
                                   opacity: .45;
                                   cursor: pointer;
@@ -266,35 +289,6 @@
                               .hidden_menu:hover{
                                   background-color: rgba(204, 204, 204, 0.2);
                               }
-                              .sub_menu_1 {
-                                  z-index: 102;
-                                  display: none;
-                                  left: -236px;
-                                  top: 0;
-                              }
-                              .sub_menu_2 {
-                                  left: 236px;
-                                  width: 162px;
-                              }
-                              .sub_menu_3 {
-                                  padding-top: 49px;
-                                  left: 236px;
-                                  width: 162px;
-                                  top: 0;
-                              }
-                              .sub_menu_4 {
-                                  left: -236px;
-                                  top: -50px;
-                              }
-                              .sub_menu_5, .sub_menu_6, .sub_menu_7, .sub_menu_8, .sub_menu_9 {
-                                  top: 0;
-                                  left: 220px;
-                                  width: 178px;
-                                  background-color: #F2F2F2;
-                              }
-                              .sub_menu_9  {
-                                  padding-bottom: 100px;
-                              }
                           }
                                          @media screen and (max-width: 371px){
                                              .microsoft {
@@ -305,34 +299,6 @@
                                                  margin-left: 7px;
                                              }
                                          }
-                                                  @media screen and (max-width: 320px){
-                                                      .sub_menu_1 {
-                                                          left: -137px;
-                                                          top: 38px;
-                                                          width: 165px;
-                                                      }
-                                                      .sub_menu_2 {
-                                                          left: 146px;
-                                                          width: 153px;
-                                                      }
-                                                      .sub_menu_3 {
-                                                          padding-top: 0;
-                                                          left: 153px;
-                                                          width: 146px;
-                                                      }
-                                                      .sub_menu_4 {
-                                                          left: -134px;
-                                                          top: 0;
-                                                          width: 165px;
-                                                      }
-                                                      .sub_menu_5, .sub_menu_6, .sub_menu_7, .sub_menu_8, .sub_menu_9 {
-                                                          left: 137px;
-                                                          width: 159px;
-                                                      }
-                                                      .sub_menu_9 {
-                                                          height: 70%;
-                                                      }
-                                                  }
 
                                 /*Dropbox */
 .dropbox  {
@@ -450,9 +416,6 @@ font-family: "Open Sans","lucida grande","Segoe UI",arial,verdana,"lucida sans u
                                     }
                                     .dropbox_bg {
                                         height: 470px;
-                                    }
-                                    .for_320_text{
-                                        color: #ffffff;
                                     }
                                     .buy_now{
                                         font-size: 14px;
