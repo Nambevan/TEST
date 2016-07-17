@@ -714,6 +714,7 @@ form label {
 }
 .open_close_menu{
     display: none;
+    margin-right: 30px;
 }
                 @media screen and (max-width: 767px){
                     .nav_block {

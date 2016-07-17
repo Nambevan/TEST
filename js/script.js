@@ -90,11 +90,3 @@ function showNav (el) {
         el.previousElementSibling.classList.remove("dop_class");
     }
 }
-$(document).ready(function(){
-    //for footer icon
-    $('.open_close_menu').click(function(){
-        $('.nav_block>ul').toggle(100);
-        $('.nav_block>label').css('border-bottom','1px solid #e3e3e3');
-        $('.open_close_menu').toggleClass('dop_class');
-    });
-});
